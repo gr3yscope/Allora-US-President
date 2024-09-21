@@ -1,12 +1,12 @@
 {
     "wallet": {
-        "addressKeyName": "keytome",
-        "addressRestoreMnemonic": "injury truck index boat require always vague vintage spin weather pole junior advice practice require cool mass husband size nation cute loud strike salt",
+        "addressKeyName": "xxxxx---xxxxx",
+        "addressRestoreMnemonic": "your key phrase",
         "alloraHomeDir": "",
         "gas": "1000000",
-        "gasAdjustment": 1.0,
+        "gasAdjustment": 1.3,
         "nodeRpc": "https://allora-rpc.testnet.allora.network/",
-        "maxRetries": 1,
+        "maxRetries": 3,
         "delay": 1,
         "submitTx": true
     },
