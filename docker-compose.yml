@@ -1,6 +1,6 @@
 services:
   inference:
-    container_name: inference
+    container_name: inference-us
     env_file:
       - .env
     build: .
@@ -11,12 +11,12 @@ services:
       test: ["CMD", "curl", "-f", "http://localhost:8000/inference/D"]
       interval: 60s
       timeout: 300s
-      retries: 12
+      retries: 14
     volumes:
       - ./inference-data:/app/data
     
   updater:
-    container_name: updater
+    container_name: updater-us
     build: .
     environment:
       - INFERENCE_API_ADDRESS=http://inference:8000
@@ -32,7 +32,7 @@ services:
         condition: service_healthy
 
   worker:
-    container_name: worker
+    container_name: worker-us
     image: alloranetwork/allora-offchain-node:latest
     volumes:
       - ./worker-data:/data
