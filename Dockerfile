@@ -17,4 +17,4 @@ FROM project_env
 COPY . /app/
 
 # Set the entrypoint command
-CMD ["gunicorn", "--conf", "/app/gunicorn_conf.py", "main:app"]
+CMD ["gunicorn", "--conf", "/app/gunicorn_conf.py", "app:app"]
