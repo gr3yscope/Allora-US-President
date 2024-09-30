@@ -2,10 +2,10 @@ flask[async]
 gunicorn[gthread]
 numpy
 pandas
-Requests
+requests
 aiohttp
 multiprocess
-scikit_learn
+scikit-learn
 python-dotenv
 joblib
 xgboost
