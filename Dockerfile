@@ -1,3 +1,4 @@
+# Use an official Python runtime as the base image
 FROM python:3.11-slim AS project_env
 
 # Install curl
