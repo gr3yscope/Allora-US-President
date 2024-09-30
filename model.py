@@ -4,6 +4,7 @@ import os
 import pickle
 from zipfile import ZipFile
 import pandas as pd
+from updater import download_binance_daily_data, download_binance_current_day_data, download_coingecko_data, download_coingecko_current_day_data
 from sklearn.metrics import mean_squared_error, r2_score
 import numpy as np
 from sklearn.model_selection import train_test_split, cross_val_score, GridSearchCV
