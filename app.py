@@ -1,3 +1,5 @@
+import logging
+logging.basicConfig(level=logging.INFO)
 import json
 from flask import Flask, Response
 from model import download_data, train_model, get_inference
@@ -5,7 +7,6 @@ from config import model_file_path, TOKEN
 
 
 app = Flask(__name__)
-
 
 def update_data():
     """Download price data, format data and train model."""
@@ -17,6 +18,7 @@ def update_data():
 @app.route("/inference/<string:token>")
 def generate_inference(token):
     """Generate inference for given token."""
+    logging.info(f"Received inference request for {token}")  # Added logging here
     if not token or token.upper() not in TOKEN:
         error_msg = "Token is required" if not token else "Token not supported"
         return Response(json.dumps({"error": error_msg}), status=400, mimetype='application/json')
