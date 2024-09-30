@@ -10,7 +10,7 @@ services:
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8000/inference/D"]
       interval: 60s
-      timeout: 300s
+      timeout: 200s
       retries: 14
     volumes:
       - ./inference-data:/app/data
