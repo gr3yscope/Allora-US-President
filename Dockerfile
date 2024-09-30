@@ -12,6 +12,8 @@ COPY requirements.txt requirements.txt
 RUN pip install --upgrade pip setuptools \
     && pip install --no-cache-dir -r requirements.txt
 
+EXPOSE 8000
+
 FROM project_env
 
 COPY . /app/
